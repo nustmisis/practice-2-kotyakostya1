@@ -16,3 +16,16 @@ Created on Fri Sep 22 15:05:53 2023
 это в сообщении
 """
 
+car_number = input()
+if len(car_number) == 6:
+    if (car_number[0:3].isupper() and car_number[0:3].isalpha()) and car_number[3:].isnumeric():
+        print('Старый формат номера')
+    else:
+        print('Последовательность не соответствует ни одному из двух форматов')
+elif len(car_number) == 7:
+    if car_number[0:4].isnumeric() and (car_number[4:].isupper() and car_number[0:3].isalpha()):
+        print('Новый формат номера')
+    else:
+        print('Последовательность не соответствует ни одному из двух форматов')
+else: 
+    print('Последовательность букв не соответствует ни одному из двух форматов')
